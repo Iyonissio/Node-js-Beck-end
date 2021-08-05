@@ -4,11 +4,11 @@ const environment = process.env.NODE_ENV || 'development';
 const config = require ('../config/config')[environment];
 
 const sequelize = new Sequelize (
-    config.dataase.name,
-    config.dataase.user,
-    config.dataase.password,
+    config.database.name,
+    config.database.user,
+    config.database.password,
     {
-        host: config.dataase.host,
+        host: config.database.host,
         dialect: config.database.dialect
     }
 );

@@ -28,7 +28,7 @@ const Usuario = sequelize.define("usuario", {
     },
     ativo: {
         allowNull: false,
-        type: Sequelize.BOOLEAN,
+        type: Sequelize.BOOLEAN(),
         defaultValue: true,
     }
 });

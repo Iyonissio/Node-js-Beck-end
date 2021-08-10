@@ -39,13 +39,13 @@ exports.SearchOne = (req, res, next) => {
   Usuario.findByPk(id)
     .then((usuario) => {
       if (usuario) {
-        res.status(status.OK).send(usuario);
+          res.status(status.OK).send(usuario);
       } else {
-        res.status(status.NOT_FOUND).send();
+          res.status(status.NOT_FOUND).send();
       }
     })
     .catch((error) => next(error));
-};
+} 
 
 exports.Update = (req, res, next) => {
   const id = req.params.id;
@@ -57,7 +57,7 @@ exports.Update = (req, res, next) => {
   Usuario.findByPk(id)
     .then(usuario => {
         if(usuario) {
-            usuario.update({
+           usuario.update({
               nome: nome,
               salario: salario,
               dataNascimento: dataNascimento,
@@ -70,7 +70,7 @@ exports.Update = (req, res, next) => {
                 res.status(status.OK).send();
             })
             .catch(error => next(error));
-        }else{
+        } else {
            res.status(status.NOT_FOUND).send(); 
         }
     })
@@ -94,8 +94,7 @@ exports.Delete = (req, res, next) => {
              res.status(status.NOT_FOUND).send();
          }
      })
-     .catch(error => next(error));
-     
+     .catch(error => next(error));  
 }
 
               

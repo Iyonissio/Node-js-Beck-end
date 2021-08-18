@@ -17,7 +17,7 @@ const Usuario = sequelize.define("usuario", {
     },
     salario: {
         allowNull: false,
-        type: Sequelize.DOUBLE,
+        type: Sequelize.DOUBLE(),
         validate: {
             len: [1, 99999]
         }

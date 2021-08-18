@@ -1,9 +1,12 @@
 const http = require('http');
-const express = require('express')
+var cors = require('cors');
+const express = require('express');
 const status = require('http-status');
 const sequelize = require('./src/database/database');
 const app = express();
 const routes = require('./src/routes/routes');
+
+app.use(cors());
 
 app.use(express.json());
 
